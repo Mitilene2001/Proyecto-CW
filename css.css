@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@media (prefers-color-scheme: light){
+    :root {
+        --dark: #393939;
+        --gris: #848484;
+        --hover-gris: #eef0f0;
+        --borde-gris: #cfcfcf;
+        --white: #ffffff;
+        --blue: #1a8cff;
+    }
+
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --white: #ffffff;
+        --dark: #393939;
+        --hover-gris: #eef0f0;;
+    }
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color:var(--white);
+}
+
+.cabecera {
+    display: flex;
+    row-gap: 20px;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom:  1px solid var(--borde-gris);
+}
+
+.cabecera_directorio {
+    font-size: 1.6rem;
+    color: var(--dark);
+}
+.cabecera_directorio span{
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.cabecera_titulo {
+    font-size: 6rem;
+    outline: none;
+    color: var(--dark);
+
+}
+
+.seccion-global {
+    padding: 20px;
+
+}
+
+main {
+    width: 85vw;
+}
+
+.seccion-tareas {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 16px;
+}
+.seccion-tareas_titulo{
+    outline: none;
+    font-size: 2rem;
+    color: var(--dark);
+}
+hr{
+    border: 1px solid var(--borde-gris);
+}
+.seccion-tareas_tarea {
+    display: flex;
+    width: 100%;
+    column-gap: 12px;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+.seccion-tareas_tarea:hover{
+    background-color: var(--hover-gris);
+}
+.seccion-tareas_tarea--p:focus,
+.seccion-tareas_tarea--p:focus-within{
+        color: white;
+        background-color: var(--blue);
+}
+.seccion-tareas_tarea--checkbox:checked ~ p{
+    text-decoration: line-through;
+}
+
+.seccion-tareas_tarea--p {
+    width: 100%;
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--dark);
+}
+
+.seccion-tareas_boton {
+    color: var(--dark);
+    display: inline-block;
+    border: none;
+    width: 200px;
+    padding: 4px 0;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+}
+
+.seccion-tareas_boton:hover {
+    cursor: pointer;
+    color: var(--gris);
+    background-color: var(--hover-gris);
+}
+
+.barra-lateral {
+    width: 15vw;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-right: 1px solid var(--borde-gris);
+}
+
+.barra-lateral_titulo {
+    font-size: 2rem;
+    color: var(--dark);
+
+}
+
+.barra-lateral_categoria {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+@media (prefers-color-scheme: light){
+    :root {
+        --dark: #393939;
+        --gris: #848484;
+        --hover-gris: #eef0f0;
+        --borde-gris: #cfcfcf;
+        --white: #ffffff;
+        --blue: #1a8cff;
+    }
+}
+.barra-lateral_elemento{
+    font-size: 1.6rem;
+    color: var(--gris);
+    margin-left: 20px;
+    padding: 2px 0;
+    padding-left: 20px;
+    border-radius: 4px;
+}
+.barra-lateral_elemento:hover{
+    color: var(--blue);
+    font-weight: bold;
+    background-color: #e4f1ff;
+}
